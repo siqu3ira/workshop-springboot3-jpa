@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,6 +24,7 @@ public class Order implements Serializable {
 	private Long id;
 	private Instant moment;
 	
+
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private User client;
