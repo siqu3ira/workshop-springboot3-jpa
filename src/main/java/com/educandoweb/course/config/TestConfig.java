@@ -26,7 +26,7 @@ public class TestConfig implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		var u1 = new User(null, "Maria Brown", "mariga@gmail.com", "61999999999", "123456");
+		var u1 = new User(null, "Maria Brown", "maria@gmail.com", "61999999999", "123456");
 		var u2 = new User(null, "Alex Green", "alex@gmail.com", "61988888888", "123456");
 		
 		var o1 = new Order(null, Instant.parse("2019-06-20T19:53:07Z"), u1);
