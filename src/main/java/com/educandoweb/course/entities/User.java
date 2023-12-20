@@ -8,6 +8,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -30,7 +31,7 @@ public class User implements Serializable{ // Utiliza o Serializable quando vc q
 	private String password;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy = "client")
+	@OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
 	private List<Order> orders =  new ArrayList<>();
 	
 	public User() {}
@@ -106,8 +107,4 @@ public class User implements Serializable{ // Utiliza o Serializable quando vc q
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
-
-
-
-	
 }
