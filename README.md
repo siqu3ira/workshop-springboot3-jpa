@@ -1,4 +1,4 @@
-# Workshop Springboot 3
+# Workshop Spring Boot 3
 
 ## Sobre o projeto
 
